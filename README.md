@@ -2,7 +2,7 @@
 This calculator does some basic operations like `addition`, `multiply`, 
 `division` and `subtraction`
 
-![image](https://github.com/codemaster08240328/sezzle-test/blob/master/sample.jpg?raw=true)
+![image](./sample.png)
 
 ## Rule
 **B** racket (`(), [], {}`)

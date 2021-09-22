@@ -2,37 +2,38 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator-wrapper {
+  width: 300px;
+  height: 430px;
+  margin: auto;
+
+  border: 3px solid skyblue;
+  border-radius: 5px;
+  padding: 20px;
+  
+}
+.calculator-res {
+  width: 260px;
+  border: 5px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator-pan {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calculator-btn {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator-btn-clear {
+  width: 280px;
+  height: 60px;
 }

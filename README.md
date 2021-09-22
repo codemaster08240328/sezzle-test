@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Fancy Calculator 
+This calculator does some basic operations like `addition`, `multiply`, 
+`division` and `subtraction`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/codemaster08240328/sezzle-test/blob/master/sample.jpg?raw=true)
 
-## Available Scripts
+## Rule
+**B** racket (`(), [], {}`)
+**O** f (`root, power`)
+**D** ivide (`/`)
+**M** ultiply (`*`)
+**A** ddition (`+`)
+**S** ubtraction (`-`)
 
-In the project directory, you can run:
+## Tech Stack
+`React.js`, `React Hook`, `node^15.6.0`
 
-### `yarn start`
+## Some useful scripts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Run project in development mode
+```
+$ yarn start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Run Test
+```
+$ yarn test
+```
 
-### `yarn test`
+## Project Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Used create-react-app template for simplicity. 
 
-### `yarn build`
+2. **Strategy** Design Principle
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For extensibility purpose, used Strategy design pattern in OOP. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you want to add more operators, 
+- customize the `ALLOWED_OPERATORS` variable from `/utils/config.js`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Customize `ORDER_RULE` variable from `/utils/config.js`
 
-### `yarn eject`
+- Customize `calculate` logic a little depends on a new operator inside Calculator class.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Customize UI.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Application exceptions:
+- Adding more than 2 `points (.)` doesn't allow.
+- Adding 2 operators sequently (eg. 2+*3) doesn't allow.
+> Above exceptions are being handled automatically so calculator does work gracefully without any error.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Application works fine:
+- Even when you try to add a new operator after 1 calculation being done.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Even when you try to add a new input for new calculation after 1 calculation being done.

@@ -27,6 +27,8 @@ $ yarn start
 $ yarn test
 ```
 
+> Focused on functioning test mainly, not UI component test. ( Because of lack of time. )
+
 ## Project Description
 
 1. Used create-react-app template for simplicity. 

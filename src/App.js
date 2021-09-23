@@ -92,16 +92,16 @@ function App() {
     <div className="App">
       <h1>Fancy Calculator</h1>
       <div className="calculator-wrapper">
-        <input className="calculator-res" value={expression} disabled />
+        <input data-testid="calculator-display-input" className="calculator-res" value={expression} disabled />
         <div className="calculator-pan">
           {
             buttons.map(btn => (
-              <button className="calculator-btn" key={btn.val} onClick={() => handleClick(btn)}>{btn.val}</button>
+              <button className="calculator-btn" data-testid="calculator-control-btn" key={btn.val} onClick={() => handleClick(btn)}>{btn.val}</button>
             ))
           }
         </div>
         <div>
-          <button className="calculator-btn-clear" onClick={handleClear}>Clear All</button>
+          <button className="calculator-btn-clear" data-testid="calculator-control-clear" onClick={handleClear}>Clear All</button>
         </div>
       </div>
     </div>
